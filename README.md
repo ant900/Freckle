@@ -33,13 +33,13 @@ This leads to one of three scenarios:
 There are 2 options to install FreckleSDK
 
 1.	Cocoapods:
+	
+	To install with Cocoapods, add the following line in your pod file:
 
-To install with Cocoapods, add the following line in your pod file:
-
-    pod 'Freckle', :git => 'https://github.com/ant900/Freckle.git'
-
-After installing the SDK, follow the steps in Project Settings. Ignore Build Settings, Link the Framework, and Linking the Bundle Resources section as that has already been done by Cocoapods.
-
+	    pod 'Freckle', :git => 'https://github.com/ant900/Freckle.git'
+	
+	After installing the SDK, follow the steps in Project Settings. Ignore Build Settings, Link the Framework, and Linking the Bundle Resources section as that has already been done by Cocoapods.
+	
 2.	Copy the framework directly to your project:
 
 Follow the steps in Project Settings.
