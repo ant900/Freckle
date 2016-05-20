@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Freckle"
-  s.version      = "1.7.2"
+  s.version      = "1.9.0"
   s.summary      = "The Freckle SDK enables any iOS application to participate in the Freckle open beacon ecosystem."
   s.homepage     = "https://github.com/ant900/Freckle.git"
   s.license      = { :type => "MIT", :file => "LICENSE" }

@@ -36,8 +36,9 @@
 /// Get the version string from the Freckle SDK
 + (NSString*)version;
 
-+(void) invalidateAllTimers;
++ (void)fetchBeaconList:(void (^)(BOOL success))callSuccessful;
 
++(void) invalidateAllTimers;
 +(void) resumeAllTimers;
 
 @end

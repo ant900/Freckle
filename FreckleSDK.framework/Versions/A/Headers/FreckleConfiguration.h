@@ -48,6 +48,11 @@ typedef enum : NSUInteger {
 // notifications/targeting/integration. This must be serializable to JSON using
 // NSJSONSerialization and NSJSONSerialization's +isValidJSONObject:(id)obj must return true.
 //
+// Default:NO
+@property (nonatomic        ) BOOL shouldShowMotionTrackingDialog;
+
+//Should the SDK ask for Motion Tracking on start-up
+//
 // Default is empty dictionary
 @property (nonatomic, strong) NSDictionary *integrationData;
 
