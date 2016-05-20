@@ -1,4 +1,4 @@
-[![FreckleSDK](Freckle_IOT.png)](http://www.freckleiot.com)
+[![FreckleSDK](Freckle_IOT.png =1000x)](http://www.freckleiot.com)
 
 The FreckleSDK from [Freckle](http://www.freckleiot.com/)
 
@@ -28,11 +28,21 @@ This leads to one of three scenarios:
 	In this case iOS sends a notification to the user’s lock screen or to the top of the screen. Tapping or
     sliding this notification has the same effect as scenario 2.
 
-## Install
+# Install
 
-To install with cocoapods, add the following line in your pod file:
+There are 2 options to install FreckleSDK
+
+1. Cocoapods:
+
+To install with Cocoapods, add the following line in your pod file:
 
     pod 'Freckle', :git => 'https://github.com/ant900/Freckle.git'
+
+After installing the SDK, follow the steps in Project Settings. Ignore Build Settings, Link the Framework, and Linking the Bundle Resources section as that has already been done by Cocoapods.
+
+2. Copy the framework directly to your project:
+
+Follow the steps in Project Settings.
 
 # Integration
 
@@ -45,6 +55,12 @@ To integrate the Freckle SDK into an existing project you just have to:
 ## Project Settings
 
 In order for your Application to respond to Beacons properly there are a few settings you must update in the project.
+
+### Build Settings
+
+1. In XCode, click on the project icon in the explorer pane. 
+2. Select the appropriate target, and click on **Build Settings**.
+3. For the **Other Linker Flags** key add the value **'-ObjC'** value if it isn't already addded.
 
 ### Capabilities
 
@@ -61,6 +77,29 @@ When the app requests the location of the user, it is important to declare the r
 2. Select the appropriate target, and click on **Info**.
 3. Under **Custom iOS Target Properties** add a key for **NSLocationAlwaysUsageDescription**.
 4. For the value enter something descriptive such as *'Your location is used to find and alert you of exclusive offers around you.'*
+
+## Linking the Framework
+
+In order for your app to use the Freckle SDK you must link it into your project.
+
+1. In XCode, open your project so that the navigation bar is visible. 
+2. In finder open the folder that houses the **FreckleSDK.framework** file.
+3. Drag **FreckleSDK.framework** into the project files of your project in XCode.
+4. Select *'Copy items if needed'* and select **Finish**
+5. Select the projects target, and click on **Build Phases**. 
+6. Verify that **FreckleSDK.framework** is now in the **'Link Binary with Libraries'** section.
+
+## Linking the Bundle Resources
+
+The Opt-in messages require localized strings, so we need to add the Freckle SDK's bundle into the build steps.
+
+1. In XCode, select the projects target, and click on **Build Phases**.
+2. In the App's Target expand the **Copy Bundle Resources** step.
+3. Select the **+** symbol to add a new file.
+4. Select **Add Other**
+5. Navigate in your project directory to the **FreckleSDK.framework** that was copied in during the last step and go into it.
+6. Go into the **Resources** folder, select the **FreckleSDK.bundle** and finally press **Open**
+7. Do not select **Copy items if needed** and select **Finish**
 
 ## Instantiating the SDK
 
@@ -246,10 +285,9 @@ For reference here is a complete App Delegate with the SDK implemented.
     }
     @end
 
-
 ## License
 
-Copyright (c) 2016 by FreckleIOT
+Copyright (c) 2016 by Freckle IOT
 http://www.freckleiot.com
 
 All Rights Reserved
