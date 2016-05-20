@@ -38,11 +38,11 @@ There are 2 options to install FreckleSDK
 
 	    pod 'Freckle', :git => 'https://github.com/ant900/Freckle.git'
 	
-	After installing the SDK, follow the steps in [Project Settings](#Project-Settings). Ignore [Build Settings](#Build-Settings), [Link the Framework](#Link-the-Framework), and [Linking the Bundle Resources](#Linking-the-Bundle-Resources) section.
+	After installing the SDK, follow the steps in [Project Settings](#project-settings). Ignore [Build Settings](#build-settings), [Link the Framework](#link-the-framework), and [Linking the Bundle Resources](#linking-the-bundle-resources) section.
 	
 2.	**Copy the framework directly to your project:**
 
-Follow the steps in [Project Settings](#Project-Settings).
+Follow the steps in [Project Settings](#project-settings).
 
 # Integration
 
