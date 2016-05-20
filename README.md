@@ -1,4 +1,4 @@
-[![FreckleSDK](Freckle_IOT.png =1000x)](http://www.freckleiot.com)
+[![FreckleSDK](Freckle_IOT.png)](http://www.freckleiot.com)
 
 The FreckleSDK from [Freckle](http://www.freckleiot.com/)
 
@@ -32,7 +32,7 @@ This leads to one of three scenarios:
 
 There are 2 options to install FreckleSDK
 
-1. Cocoapods:
+1.	Cocoapods:
 
 To install with Cocoapods, add the following line in your pod file:
 
@@ -40,7 +40,7 @@ To install with Cocoapods, add the following line in your pod file:
 
 After installing the SDK, follow the steps in Project Settings. Ignore Build Settings, Link the Framework, and Linking the Bundle Resources section as that has already been done by Cocoapods.
 
-2. Copy the framework directly to your project:
+2.	Copy the framework directly to your project:
 
 Follow the steps in Project Settings.
 
