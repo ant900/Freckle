@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum : NSUInteger {
-    FreckleOptInStatusUnset = 0,
-    FreckleOptInStatusAllowed,
-    FreckleOptInStatusDenied,
-} FreckleOptInStatus;
+//typedef enum : NSUInteger {
+//    FreckleOptInStatusUnset = 0,
+//    FreckleOptInStatusAllowed,
+//    FreckleOptInStatusDenied,
+//} FreckleOptInStatus;
 
 @class FreckleConfiguration;
 @protocol FreckleConfigurationDelegate <NSObject>
@@ -24,12 +24,12 @@ typedef enum : NSUInteger {
 // Whether the user is opted into location awareness inside the SDK
 //
 // Default: FITOptInStatusUnset
-@property (nonatomic        ) FreckleOptInStatus locationOptIn;
+@property (nonatomic        ) NSNumber *locationOptIn;
 
 // Whether the user is opted into third-party notifications
 //
 // Default: FITOptInStatusUnset
-@property (nonatomic        ) FreckleOptInStatus notificationOptIn;
+@property (nonatomic        ) NSNumber *notificationOptIn;
 
 // Should the SDK ask to display third-party notifications in an alert dialog.
 // This will pop-up after the location dialog has been shown and acted upon.
@@ -49,7 +49,7 @@ typedef enum : NSUInteger {
 // NSJSONSerialization and NSJSONSerialization's +isValidJSONObject:(id)obj must return true.
 //
 // Default:NO
-@property (nonatomic        ) BOOL shouldShowMotionTrackingDialog;
+//@property (nonatomic        ) BOOL shouldShowMotionTrackingDialog;
 
 //Should the SDK ask for Motion Tracking on start-up
 //
